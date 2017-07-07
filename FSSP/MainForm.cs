@@ -92,7 +92,7 @@ namespace FSSP
             if (a.hasExcel && a.hasProxy && a.hasOutput)
             {
                 startButton.Enabled = true;
-
+                setThreads.Enabled = true;
             }
         }
     }

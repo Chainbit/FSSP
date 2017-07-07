@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.setOutputPath = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.setThreads = new System.Windows.Forms.NumericUpDown();
             this.startButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
             this.excelFileName = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.outputFileName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.workingThreads = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setThreads)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -131,25 +131,25 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Количество потоков:";
             // 
-            // numericUpDown1
+            // setThreads
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(316, 205);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.setThreads.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.setThreads.Enabled = false;
+            this.setThreads.Location = new System.Drawing.Point(316, 205);
+            this.setThreads.Maximum = new decimal(new int[] {
             256,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.setThreads.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(75, 20);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.setThreads.Name = "setThreads";
+            this.setThreads.Size = new System.Drawing.Size(75, 20);
+            this.setThreads.TabIndex = 8;
+            this.setThreads.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -244,7 +244,7 @@
             this.Controls.Add(this.excelFileName);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.setThreads);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.setOutputPath);
             this.Controls.Add(this.label4);
@@ -256,7 +256,7 @@
             this.Name = "MainForm";
             this.Text = "FSSP настройки";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setThreads)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +272,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button setOutputPath;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown setThreads;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Label excelFileName;

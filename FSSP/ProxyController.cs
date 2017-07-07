@@ -14,7 +14,7 @@ namespace FSSP
 
         private static int proxyCount = proxyList.Length; 
 
-        public List<Proxy> Proxies;
+        public List<Proxy> Proxies = new List<Proxy>();
 
         public ProxyController()
         {

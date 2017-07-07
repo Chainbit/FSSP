@@ -134,7 +134,6 @@
             // setThreads
             // 
             this.setThreads.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.setThreads.Enabled = false;
             this.setThreads.Location = new System.Drawing.Point(316, 205);
             this.setThreads.Maximum = new decimal(new int[] {
             256,
@@ -159,7 +158,6 @@
             // 
             this.startButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.startButton.BackColor = System.Drawing.SystemColors.Control;
-            this.startButton.Enabled = false;
             this.startButton.Location = new System.Drawing.Point(156, 287);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(110, 40);

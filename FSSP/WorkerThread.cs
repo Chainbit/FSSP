@@ -11,21 +11,24 @@ namespace FSSP
     class WorkerThread
     {
        bool isWork = false;
+        Form1 workerForm;
 
+        
         public WorkerThread()
         {
             this.isWork = true;
-            this.Work();
+            this.workerForm = new Form1();
+            
+            workerForm.Show();
         }
 
+        
         public void Work()
         {
-            Form1 workForm = new Form1();            
-            Application.Run(workForm);
-            workForm.Show();
-
+           
             while (isWork)
             {
+               
                 
             }
         }

@@ -15,7 +15,9 @@ namespace FSSP
         public WorkerThread()
         {
             this.isWork = true;
+            this.Work();
         }
+
         public void Work()
         {
             Form1 workForm = new Form1();            

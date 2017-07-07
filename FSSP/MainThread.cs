@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+
 namespace FSSP
 {
     class MainThread
@@ -17,7 +18,10 @@ namespace FSSP
 
            for(int i = 0; i < threadsCount; i++)
             {
-                Thread i = new Thread()
+                WorkerThread workThread = new WorkerThread(// передача аргументов для создания обьекта
+                    );
+               
+               // Thread i = new Thread()
             }
         }
     }

@@ -35,11 +35,11 @@ namespace FSSP
             DialogResult result = dialog.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {
-                string file = dialog.FileName;
+                excelFileName.Text = dialog.SafeFileName; //name with extention
+                excelFileName.Visible = true;
                 try
                 {
-                    string text = File.ReadAllText(file);
-                    size = text.Length;
+                    
                 }
                 catch (IOException)
                 {

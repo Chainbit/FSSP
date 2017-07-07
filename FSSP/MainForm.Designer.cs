@@ -181,6 +181,7 @@
             this.excelFileName.Size = new System.Drawing.Size(76, 13);
             this.excelFileName.TabIndex = 11;
             this.excelFileName.Text = "excelFileName";
+            this.excelFileName.Visible = false;
             // 
             // proxyFileName
             // 
@@ -190,6 +191,7 @@
             this.proxyFileName.Size = new System.Drawing.Size(76, 13);
             this.proxyFileName.TabIndex = 12;
             this.proxyFileName.Text = "proxyFileName";
+            this.proxyFileName.Visible = false;
             // 
             // outputFileName
             // 
@@ -199,6 +201,7 @@
             this.outputFileName.Size = new System.Drawing.Size(81, 13);
             this.outputFileName.TabIndex = 13;
             this.outputFileName.Text = "outputFileName";
+            this.outputFileName.Visible = false;
             // 
             // MainForm
             // 

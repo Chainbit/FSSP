@@ -14,7 +14,7 @@ namespace FSSP
 {
     public partial class MainForm : Form
     {
-        Attachments a = new Attachments();
+        //Attachments a = new Attachments();
 
         public MainForm()
         {
@@ -85,22 +85,21 @@ namespace FSSP
         private void startButton_Click(object sender, EventArgs e)
         {
             ProxyController ps = new ProxyController();
+            MainThread mainThreadClass = new MainThread();
+            Thread mainThread = new Thread(mainThreadClass.CreateThreads);
+            mainThread.Start(setThreads.Value);
         }
 
-        private void Check()
+        /*private void Check()
         {
             if (a.hasExcel && a.hasProxy && a.hasOutput)
             {
                 startButton.Enabled = true;
                 setThreads.Enabled = true;
             }
-        }
+        }*/
     }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-            
-        }
+      
     }
-}
+//}

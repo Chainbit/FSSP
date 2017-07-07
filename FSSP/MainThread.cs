@@ -21,8 +21,7 @@ namespace FSSP
            //Создаем рабочие классы и потоки
            for(int i = 0; i < threadsCountInt; i++)
             {
-                WorkerThread workThread = new WorkerThread(// передача аргументов для создания обьекта
-                    );
+                WorkerThread workThread = new WorkerThread();
                 allThreads.Add(workThread);
                 Thread worker = new Thread(workThread.Work);
                 worker.Start();

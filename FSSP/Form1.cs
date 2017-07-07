@@ -11,11 +11,18 @@ using Gecko;
 
 namespace FSSP
 {
+    
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
+            initil();
+        }
+        [STAThread]
+        private void initil()
+        {
             Xpcom.Initialize("Firefox");
         }
 

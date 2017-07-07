@@ -21,13 +21,17 @@ namespace FSSP
         private void setOutputPath_Click(object sender, EventArgs e)
         {
             SaveFileDialog dialog = new SaveFileDialog();
-            int size = -1;
             dialog.Filter = "Таблица Excel|*.csv";
+
             DialogResult result = dialog.ShowDialog(); // Show the dialog.
+            
             if (result == DialogResult.OK) // Test result.
             {
-                outputFileName.Text = dialog.FileName; //name with extention
+                string output = dialog.FileName;
+                output = output.Substring(output.Length - 12);
+                outputFileName.Text = "..." + output;
                 outputFileName.Visible = true;
+
                 FileManager.outputFile = dialog.FileName;
                 try
                 {
@@ -42,9 +46,10 @@ namespace FSSP
         private void setProxyPath_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            int size = -1;
             dialog.Filter = "Текстовые документы|*.txt";
+
             DialogResult result = dialog.ShowDialog(); // Show the dialog.
+
             if (result == DialogResult.OK) // Test result.
             {
                 proxyFileName.Text = @".../" + dialog.SafeFileName; //name with extention
@@ -63,9 +68,10 @@ namespace FSSP
         private void setExcelPath_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            int size = -1;
             dialog.Filter = "Таблицы Excel|*.xls;*.xlsx;*.csv";
+
             DialogResult result = dialog.ShowDialog(); // Show the dialog.
+
             if (result == DialogResult.OK) // Test result.
             {
                 excelFileName.Text = @".../" + dialog.SafeFileName;//name with extention

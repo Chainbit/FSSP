@@ -13,11 +13,19 @@ namespace FSSP
 {
     public partial class MainForm : Form
     {
-        Attachments a = new Attachments();
+        Attachments a;
 
         public MainForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            a = new Attachments(this);
+        }
+        
+        public void EnableButtons() // включить отключенные кнопки
+        {
+            startButton.Enabled = true;
+            stopButton.Enabled = true;
+            setThreads.Enabled = true;
         }
 
         private void setOutputPath_Click(object sender, EventArgs e)
@@ -33,15 +41,8 @@ namespace FSSP
                 output = output.Substring(output.Length - 12);
                 outputFileName.Text = "..." + output;
                 outputFileName.Visible = true; // отображается путь к файлу
-
                 FileManager.outputFile = dialog.FileName;
-                try
-                {
-
-                }
-                catch (IOException)
-                {
-                }
+                a.Confirm(Attachments.Type.output);// подтверждаем прикрепление файла
             }
         }
 
@@ -57,6 +58,7 @@ namespace FSSP
                 proxyFileName.Text = @".../" + dialog.SafeFileName; //name with extention
                 proxyFileName.Visible = true; // отображается путь к файлу
                 FileManager.proxyFile = dialog.FileName;
+                a.Confirm(Attachments.Type.proxy);// подтверждаем прикрепление файла
             }
         }
 
@@ -72,6 +74,7 @@ namespace FSSP
                 excelFileName.Text = @".../" + dialog.SafeFileName;//name with extention
                 excelFileName.Visible = true;// отображается путь к файлу
                 FileManager.excelFile = dialog.FileName;
+                a.Confirm(Attachments.Type.excel);// подтверждаем прикрепление файла
             }
         }
 
@@ -86,20 +89,52 @@ namespace FSSP
             ProxyController ps = new ProxyController();
         }
 
-        private void Check()
-        {
-            if (a.hasExcel && a.hasProxy && a.hasOutput)
-            {
-                startButton.Enabled = true;
-                setThreads.Enabled = true;
-            }
-        }
+
     }
 
-    class Attachments
+    class Attachments 
     {
-        public bool hasExcel = false;
-        public bool hasProxy = false;
-        public bool hasOutput = false;
+        private MainForm myForm; // форма, с которой работаем
+
+        private bool hasExcel = false;
+        private bool hasProxy = false;
+        private bool hasOutput = false;
+
+        public Attachments(MainForm form)
+        {
+            myForm = form;
+        }
+
+        private void Check()
+        {
+            if (hasExcel && hasProxy && hasOutput)
+            {
+                myForm.EnableButtons();
+            }
+        }
+
+        public void Confirm(Type file)
+        {
+            switch (file)
+            {
+                case Type.excel:
+                    hasExcel = true;
+                    break;
+                case Type.proxy:
+                    hasProxy = true;
+                    break;
+                case Type.output:
+                    hasOutput = true;
+                    break;
+            }
+            Check();
+        }
+
+        public enum Type
+        {
+            excel,
+            proxy,
+            output
+        }
     }
 }

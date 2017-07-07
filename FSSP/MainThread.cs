@@ -24,6 +24,7 @@ namespace FSSP
                 WorkerThread workThread = new WorkerThread();
                 allThreads.Add(workThread);
                 Thread worker = new Thread(workThread.Work);
+                
                 worker.Start();
                
             }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace FSSP
 {
@@ -86,7 +87,11 @@ namespace FSSP
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            ProxyController ps = new ProxyController();
+            //ProxyController ps = new ProxyController();
+            MainThread mainThreadClass = new MainThread();
+            Thread mainThread = new Thread(mainThreadClass.CreateThreads);
+            mainThread.SetApartmentState(ApartmentState.MTA);
+            mainThread.Start(setThreads.Value);
         }
 
 

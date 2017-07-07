@@ -42,6 +42,8 @@
             this.excelFileName = new System.Windows.Forms.Label();
             this.proxyFileName = new System.Windows.Forms.Label();
             this.outputFileName = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.workingThreads = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(89, 9);
+            this.label1.Location = new System.Drawing.Point(125, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(296, 37);
             this.label1.TabIndex = 0;
@@ -60,7 +62,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 82);
+            this.label2.Location = new System.Drawing.Point(115, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +71,7 @@
             // setExcelPath
             // 
             this.setExcelPath.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.setExcelPath.Location = new System.Drawing.Point(340, 77);
+            this.setExcelPath.Location = new System.Drawing.Point(376, 77);
             this.setExcelPath.Name = "setExcelPath";
             this.setExcelPath.Size = new System.Drawing.Size(75, 23);
             this.setExcelPath.TabIndex = 2;
@@ -81,7 +83,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 123);
+            this.label3.Location = new System.Drawing.Point(115, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 3;
@@ -90,7 +92,7 @@
             // setProxyPath
             // 
             this.setProxyPath.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.setProxyPath.Location = new System.Drawing.Point(340, 118);
+            this.setProxyPath.Location = new System.Drawing.Point(376, 118);
             this.setProxyPath.Name = "setProxyPath";
             this.setProxyPath.Size = new System.Drawing.Size(75, 23);
             this.setProxyPath.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 163);
+            this.label4.Location = new System.Drawing.Point(115, 163);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 5;
@@ -111,7 +113,7 @@
             // setOutputPath
             // 
             this.setOutputPath.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.setOutputPath.Location = new System.Drawing.Point(340, 158);
+            this.setOutputPath.Location = new System.Drawing.Point(376, 158);
             this.setOutputPath.Name = "setOutputPath";
             this.setOutputPath.Size = new System.Drawing.Size(75, 23);
             this.setOutputPath.TabIndex = 6;
@@ -123,7 +125,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 207);
+            this.label5.Location = new System.Drawing.Point(153, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 13);
             this.label5.TabIndex = 7;
@@ -132,7 +134,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numericUpDown1.Location = new System.Drawing.Point(280, 205);
+            this.numericUpDown1.Location = new System.Drawing.Point(316, 205);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             256,
             0,
@@ -156,7 +158,7 @@
             // 
             this.startButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.startButton.BackColor = System.Drawing.SystemColors.Control;
-            this.startButton.Location = new System.Drawing.Point(120, 247);
+            this.startButton.Location = new System.Drawing.Point(156, 287);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(110, 40);
             this.startButton.TabIndex = 9;
@@ -166,7 +168,7 @@
             // stopButton
             // 
             this.stopButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.stopButton.Location = new System.Drawing.Point(245, 247);
+            this.stopButton.Location = new System.Drawing.Point(281, 287);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(110, 40);
             this.stopButton.TabIndex = 10;
@@ -177,7 +179,7 @@
             // 
             this.excelFileName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.excelFileName.AutoSize = true;
-            this.excelFileName.Location = new System.Drawing.Point(242, 82);
+            this.excelFileName.Location = new System.Drawing.Point(278, 82);
             this.excelFileName.Name = "excelFileName";
             this.excelFileName.Size = new System.Drawing.Size(76, 13);
             this.excelFileName.TabIndex = 11;
@@ -188,7 +190,7 @@
             // 
             this.proxyFileName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.proxyFileName.AutoSize = true;
-            this.proxyFileName.Location = new System.Drawing.Point(242, 123);
+            this.proxyFileName.Location = new System.Drawing.Point(278, 123);
             this.proxyFileName.Name = "proxyFileName";
             this.proxyFileName.Size = new System.Drawing.Size(76, 13);
             this.proxyFileName.TabIndex = 12;
@@ -199,19 +201,41 @@
             // 
             this.outputFileName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.outputFileName.AutoSize = true;
-            this.outputFileName.Location = new System.Drawing.Point(242, 163);
+            this.outputFileName.Location = new System.Drawing.Point(278, 163);
             this.outputFileName.Name = "outputFileName";
             this.outputFileName.Size = new System.Drawing.Size(81, 13);
             this.outputFileName.TabIndex = 13;
             this.outputFileName.Text = "outputFileName";
             this.outputFileName.Visible = false;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(153, 241);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Потоков в работе:";
+            // 
+            // workingThreads
+            // 
+            this.workingThreads.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.workingThreads.AutoSize = true;
+            this.workingThreads.Location = new System.Drawing.Point(315, 241);
+            this.workingThreads.Name = "workingThreads";
+            this.workingThreads.Size = new System.Drawing.Size(13, 13);
+            this.workingThreads.TabIndex = 15;
+            this.workingThreads.Text = "0";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(464, 311);
+            this.ClientSize = new System.Drawing.Size(537, 377);
+            this.Controls.Add(this.workingThreads);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.outputFileName);
             this.Controls.Add(this.proxyFileName);
             this.Controls.Add(this.excelFileName);
@@ -251,5 +275,7 @@
         private System.Windows.Forms.Label excelFileName;
         private System.Windows.Forms.Label proxyFileName;
         private System.Windows.Forms.Label outputFileName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label workingThreads;
     }
 }

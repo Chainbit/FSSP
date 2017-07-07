@@ -10,6 +10,6 @@ namespace FSSP
     {
         public static string excelFile;
         public static string proxyFile;
-        public static string outputPath;
+        public static string outputFile;
     }
 }

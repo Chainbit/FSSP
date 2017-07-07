@@ -20,7 +20,7 @@ namespace FSSP
             InitializeComponent();
             initil();
         }
-        [STAThread]
+        
         private void initil()
         {
             Xpcom.Initialize("Firefox");

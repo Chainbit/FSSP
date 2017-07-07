@@ -91,6 +91,7 @@ namespace FSSP
             MainThread mainThreadClass = new MainThread();
             Thread mainThread = new Thread(mainThreadClass.CreateThreads);
             mainThread.SetApartmentState(ApartmentState.MTA);
+            
             mainThread.Start(setThreads.Value);
         }
 

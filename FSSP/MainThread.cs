@@ -11,11 +11,14 @@ namespace FSSP
     {
         static List<Thread> allThreads = new List<Thread>();
 
-        public void CreateThreads(int i)
+        public void CreateThreads(int threadsCount)
         {
-            if (i < 1) return;
+           if (threadsCount < 1) return;
 
-
+           for(int i = 0; i < threadsCount; i++)
+            {
+                Thread i = new Thread()
+            }
         }
     }
 }

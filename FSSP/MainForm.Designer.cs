@@ -134,6 +134,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.numericUpDown1.Enabled = false;
             this.numericUpDown1.Location = new System.Drawing.Point(316, 205);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             256,
@@ -158,12 +159,14 @@
             // 
             this.startButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.startButton.BackColor = System.Drawing.SystemColors.Control;
+            this.startButton.Enabled = false;
             this.startButton.Location = new System.Drawing.Point(156, 287);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(110, 40);
             this.startButton.TabIndex = 9;
             this.startButton.Text = "Старт";
             this.startButton.UseVisualStyleBackColor = false;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // stopButton
             // 

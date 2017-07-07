@@ -35,18 +35,21 @@
             // 
             // browser1
             // 
+            this.browser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.browser1.FrameEventsPropagateToMainWindow = false;
-            this.browser1.Location = new System.Drawing.Point(13, 48);
+            this.browser1.Location = new System.Drawing.Point(13, 87);
             this.browser1.Name = "browser1";
-            this.browser1.Size = new System.Drawing.Size(891, 339);
+            this.browser1.Size = new System.Drawing.Size(891, 362);
             this.browser1.TabIndex = 0;
             this.browser1.UseHttpActivityObserver = false;
             // 
             // addressBar
             // 
-            this.addressBar.Location = new System.Drawing.Point(13, 13);
+            this.addressBar.Location = new System.Drawing.Point(608, 13);
             this.addressBar.Name = "addressBar";
-            this.addressBar.Size = new System.Drawing.Size(798, 20);
+            this.addressBar.Size = new System.Drawing.Size(203, 20);
             this.addressBar.TabIndex = 1;
             // 
             // navButton
@@ -55,7 +58,7 @@
             this.navButton.Name = "navButton";
             this.navButton.Size = new System.Drawing.Size(86, 20);
             this.navButton.TabIndex = 2;
-            this.navButton.Text = "button1";
+            this.navButton.Text = "Go!";
             this.navButton.UseVisualStyleBackColor = true;
             this.navButton.Click += new System.EventHandler(this.navButton_Click);
             // 
@@ -63,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 399);
+            this.ClientSize = new System.Drawing.Size(916, 461);
             this.Controls.Add(this.navButton);
             this.Controls.Add(this.addressBar);
             this.Controls.Add(this.browser1);

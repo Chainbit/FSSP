@@ -16,6 +16,7 @@ namespace FSSP
         public MainForm()
         {
             InitializeComponent();
+
         }
 
         private void setOutputPath_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace FSSP
                 string output = dialog.FileName;
                 output = output.Substring(output.Length - 12);
                 outputFileName.Text = "..." + output;
-                outputFileName.Visible = true;
+                outputFileName.Visible = true; // отображается путь к файлу
 
                 FileManager.outputFile = dialog.FileName;
                 try
@@ -53,15 +54,8 @@ namespace FSSP
             if (result == DialogResult.OK) // Test result.
             {
                 proxyFileName.Text = @".../" + dialog.SafeFileName; //name with extention
-                proxyFileName.Visible = true;
+                proxyFileName.Visible = true; // отображается путь к файлу
                 FileManager.proxyFile = dialog.FileName;
-                try
-                {
-
-                }
-                catch (IOException)
-                {
-                }
             }
         }
 
@@ -75,15 +69,8 @@ namespace FSSP
             if (result == DialogResult.OK) // Test result.
             {
                 excelFileName.Text = @".../" + dialog.SafeFileName;//name with extention
-                excelFileName.Visible = true;
+                excelFileName.Visible = true;// отображается путь к файлу
                 FileManager.excelFile = dialog.FileName;
-                try
-                {
-                    
-                }
-                catch (IOException)
-                {
-                }
             }
         }
 
@@ -91,6 +78,11 @@ namespace FSSP
         {
 
             
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            ProxyController ps = new ProxyController();
         }
     }
 }

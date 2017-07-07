@@ -55,7 +55,7 @@
             this.navButton.Name = "navButton";
             this.navButton.Size = new System.Drawing.Size(86, 20);
             this.navButton.TabIndex = 2;
-            this.navButton.Text = "button1";
+            this.navButton.Text = "Navigate";
             this.navButton.UseVisualStyleBackColor = true;
             this.navButton.Click += new System.EventHandler(this.navButton_Click);
             // 

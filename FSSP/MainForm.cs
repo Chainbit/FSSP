@@ -60,6 +60,10 @@ namespace FSSP
                 proxyFileName.Visible = true; // отображается путь к файлу
                 FileManager.proxyFile = dialog.FileName;
                 a.Confirm(Attachments.Type.proxy);// подтверждаем прикрепление файла
+
+                ////создаем прокси контроллер
+                //ProxyController ps = new ProxyController();
+                //setThreads.Maximum = ps.Proxies.Count;
             }
         }
 
@@ -87,7 +91,6 @@ namespace FSSP
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            //ProxyController ps = new ProxyController();
             MainThread mainThreadClass = new MainThread();
             Thread mainThread = new Thread(mainThreadClass.CreateThreads);
             mainThread.SetApartmentState(ApartmentState.MTA);

@@ -10,7 +10,7 @@ namespace FSSP
 {
     class MainThread
     {
-        static List<Thread> allThreads = new List<Thread>();
+        static List<WorkerThread> allThreads = new List<WorkerThread>();
 
         public void CreateThreads(object threadsCount)
         {
@@ -23,6 +23,7 @@ namespace FSSP
             {
                 WorkerThread workThread = new WorkerThread(// передача аргументов для создания обьекта
                     );
+                allThreads.Add(workThread);
                 Thread worker = new Thread(workThread.Work);
                 worker.Start();
                

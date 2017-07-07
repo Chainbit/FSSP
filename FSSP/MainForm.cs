@@ -32,11 +32,13 @@ namespace FSSP
         {
             OpenFileDialog dialog = new OpenFileDialog();
             int size = -1;
+            dialog.Filter = "Таблицы Excel|*.xls;*.xlsx;*.csv;";
             DialogResult result = dialog.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {
                 excelFileName.Text = dialog.SafeFileName; //name with extention
                 excelFileName.Visible = true;
+                FileManager.excelFile = dialog.FileName;
                 try
                 {
                     

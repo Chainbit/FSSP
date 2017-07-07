@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace FSSP
 {
-    class FileManager
+    static class FileManager
     {
-
+        public static string excelFile;
+        public static string proxyFile;
+        public static string outputPath;
     }
 }

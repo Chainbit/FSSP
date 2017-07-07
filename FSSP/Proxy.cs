@@ -15,7 +15,7 @@ namespace FSSP
 
         public Proxy(WebProxy wp, NetworkCredential nc)
         {
-            addressPort = wp;
+            AddressPort = wp;
             LogoPass = nc;
         }
     }

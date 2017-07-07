@@ -13,10 +13,11 @@ namespace FSSP
 {
     public partial class MainForm : Form
     {
+        Attachments a = new Attachments();
+
         public MainForm()
         {
-            InitializeComponent();
-
+            InitializeComponent();            
         }
 
         private void setOutputPath_Click(object sender, EventArgs e)
@@ -84,5 +85,21 @@ namespace FSSP
         {
             ProxyController ps = new ProxyController();
         }
+
+        private void Check()
+        {
+            if (a.hasExcel && a.hasProxy && a.hasOutput)
+            {
+                startButton.Enabled = true;
+
+            }
+        }
+    }
+
+    class Attachments
+    {
+        public bool hasExcel = false;
+        public bool hasProxy = false;
+        public bool hasOutput = false;
     }
 }

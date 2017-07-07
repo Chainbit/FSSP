@@ -22,16 +22,6 @@ namespace FSSP
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void setOutputPath_Click(object sender, EventArgs e)
         {
 
@@ -42,14 +32,15 @@ namespace FSSP
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void setExcelPath_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void setExcelPath_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
+            
         }
     }
 }

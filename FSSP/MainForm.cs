@@ -8,15 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace FSSP
 {
     public partial class MainForm : Form
     {
+        Attachments a = new Attachments();
+
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void setOutputPath_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace FSSP
                 string output = dialog.FileName;
                 output = output.Substring(output.Length - 12);
                 outputFileName.Text = "..." + output;
-                outputFileName.Visible = true;
+                outputFileName.Visible = true; // отображается путь к файлу
 
                 FileManager.outputFile = dialog.FileName;
                 try
@@ -54,15 +55,8 @@ namespace FSSP
             if (result == DialogResult.OK) // Test result.
             {
                 proxyFileName.Text = @".../" + dialog.SafeFileName; //name with extention
-                proxyFileName.Visible = true;
+                proxyFileName.Visible = true; // отображается путь к файлу
                 FileManager.proxyFile = dialog.FileName;
-                try
-                {
-
-                }
-                catch (IOException)
-                {
-                }
             }
         }
 
@@ -76,15 +70,8 @@ namespace FSSP
             if (result == DialogResult.OK) // Test result.
             {
                 excelFileName.Text = @".../" + dialog.SafeFileName;//name with extention
-                excelFileName.Visible = true;
+                excelFileName.Visible = true;// отображается путь к файлу
                 FileManager.excelFile = dialog.FileName;
-                try
-                {
-                    
-                }
-                catch (IOException)
-                {
-                }
             }
         }
 
@@ -96,10 +83,23 @@ namespace FSSP
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            MainThread mainThread = new MainThread();
-
-            Thread headThread = new Thread(mainThread.CreateThreads);
-            headThread.Start(numericUpDown1.Value);
+            ProxyController ps = new ProxyController();
         }
+
+        private void Check()
+        {
+            if (a.hasExcel && a.hasProxy && a.hasOutput)
+            {
+                startButton.Enabled = true;
+
+            }
+        }
+    }
+
+    class Attachments
+    {
+        public bool hasExcel = false;
+        public bool hasProxy = false;
+        public bool hasOutput = false;
     }
 }

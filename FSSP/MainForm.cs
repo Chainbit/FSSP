@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace FSSP
 {
@@ -91,6 +92,14 @@ namespace FSSP
         {
 
             
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            MainThread mainThread = new MainThread();
+
+            Thread headThread = new Thread(mainThread.CreateThreads);
+            headThread.Start(numericUpDown1.Value);
         }
     }
 }

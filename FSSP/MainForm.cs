@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace FSSP
 {
@@ -96,10 +97,10 @@ namespace FSSP
         }
     }
 
-    class Attachments
-    {
-        public bool hasExcel = false;
-        public bool hasProxy = false;
-        public bool hasOutput = false;
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }
